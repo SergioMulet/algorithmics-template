@@ -22,6 +22,7 @@ public class Vector1 {
 	static int[] w; //another vector of elements
 
 	public static void main(String arg []){
+	  
 	  int n = Integer.parseInt(arg[0]); //Size of the problem in the first argument
 	  v = new int[n];
 	  fillIn(v);
