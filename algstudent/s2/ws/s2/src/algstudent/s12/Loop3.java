@@ -1,35 +1,37 @@
-package s2;
+package algstudent.s12;
 
-public class Loop6 {
-
-	public static long loop6(int n) {
+public class Loop3 {
+	
+	public static long loop3(long n) {
 		long cont = 0;
-		for (int i = 1; i <= n; i++) //n
-			for (int j = 1; j <= i; j++) //n
-				for (int k = 1; k <= j; k++) //n
-					for(int l =1; l <= n; l *= 2)
-						cont++;
-		return cont;
+		long i = 1;
+		while (i <= 2 * n) { //n
+			for (long j = i; j >= 0; j -= 2) //1
+				for (long k = 1; k <= n; k *= 2) //logn
+					cont++;
+			i++;
+		}
 
+		return cont;
 	}
 
 	public static void main(String arg[]) {
-		long c = 0;
 		long t1, t2;
-
 		int nTimes = Integer.parseInt(arg[0]);
 
 		System.out.println("n\ttime\trepetions\tcounter");
 
-		for (int n = 100; n <= 819200; n *= 2) {
+		for (long n = 100; n <= 819200; n *= 2) {
+			long c = 0;
 			t1 = System.currentTimeMillis();
 
 			for (int repetitions = 1; repetitions <= nTimes; repetitions++)
-				c = loop6(n);
+				c = loop3(n);
 
 			t2 = System.currentTimeMillis();
-
 			System.out.println(n + "\t" + (t2 - t1) + "\t" + nTimes + "\t\t" + c);
+
 		} // for
 	} // main
-}
+	
+} 

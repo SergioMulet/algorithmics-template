@@ -1,9 +1,9 @@
-package alg01;
+package algstudent.s0;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class Vector2 {
+public class JavaA3 {
 
 	public static void main(String[] args) {
 
@@ -18,7 +18,7 @@ public class Vector2 {
 	}
 
 	public static boolean primoA2(int m) {
-		for (int i = 2; i < m; i++) {
+		for (int i = 2; i <= m/2; i++) {
 			if (m % i == 0)
 				return false;
 		}

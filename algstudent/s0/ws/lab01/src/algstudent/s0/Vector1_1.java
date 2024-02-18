@@ -1,4 +1,4 @@
-package alg01;
+package algstudent.s0;
 
 public class Vector1_1 {
 

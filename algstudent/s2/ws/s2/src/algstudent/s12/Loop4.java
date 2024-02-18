@@ -1,4 +1,4 @@
-package s2;
+package algstudent.s12;
 
 public class Loop4 {
 

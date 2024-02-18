@@ -1,4 +1,4 @@
-package alg01;
+package algstudent.s0;
 
 import java.util.ArrayList;
 import java.util.List;

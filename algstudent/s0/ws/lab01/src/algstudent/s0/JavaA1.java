@@ -1,8 +1,8 @@
-package alg01;
+package algstudent.s0;
 
 import java.util.List;
 
-public class Vector1 {
+public class JavaA1 {
 	
 	public static void main(String [] args) {
 		

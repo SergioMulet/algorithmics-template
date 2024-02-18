@@ -1,18 +1,6 @@
-package s2;
+package algstudent.s12;
 
-public class Loop1 {
-
-	public static long loop1(long n) {
-		long cont = 0;
-		long n1 = 1;
-		while (n1 <= n * n) { // logn
-			for (long i = 1; i <= 2 * n; i += 3)//n
-				cont++;
-			n1 = 3 * n1;
-		}
-		return cont;
-	}
-
+public class Loop5 {
 	public static void main(String arg[]) {
 		long t1, t2;
 		int nTimes = Integer.parseInt(arg[0]);
@@ -24,7 +12,7 @@ public class Loop1 {
 			t1 = System.currentTimeMillis();
 
 			for (int repetitions = 1; repetitions <= nTimes; repetitions++)
-				c = loop1(n);
+				c = loop5(n);
 
 			t2 = System.currentTimeMillis();
 
@@ -32,4 +20,19 @@ public class Loop1 {
 		} // for
 	} // main
 	
-} 
+	public static long loop5(long n){
+		long cont = 0;
+		long n1 = n;
+		do {
+			for (long i = 1; i <= n; i++) //n
+				for (long j = n; j >= 0; j -= 2) //n
+					for(long k =1; k <= n; k*=2) //logn
+						cont++;						
+			n1 = n1 / 3;
+		} while (n1 >= 1); //logn
+
+		return cont;
+
+		}
+}
+
