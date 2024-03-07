@@ -2,14 +2,19 @@ package algstudent.s3;
 
 public class Division4 {
 
-	public static long rec3 (int n)
+	public static long rec4 (int n)
 	{
      long cont = 0;
 	 if (n<=0) cont++;
 	 else
-	  { cont++ ; // O(1)    
-	    rec3(n/2);
-	    rec3(n/2);
+	  { 
+		 for (int i = 0; i <n; i++) {
+			 for (int j = 0; j < n; j++) {
+				 cont++;
+			 }
+		 }
+		cont++ ; // O(1)    
+	    rec4(n/2);
 	  }
 	 return cont;   
 	}
@@ -17,11 +22,11 @@ public class Division4 {
 	public static void main (String arg []) 
 	{
 		 long t1,t2,cont = 0;	 
-		 for (int n=100;n<=10000000;n*=2)
+		 for (int n=1000;n<=10000000;n*=2)
 		 {
 			  t1 = System.currentTimeMillis ();
 			   
-			  cont = rec3(n);
+			  cont = rec4(n);
 			      
 			  t2 = System.currentTimeMillis ();
 			

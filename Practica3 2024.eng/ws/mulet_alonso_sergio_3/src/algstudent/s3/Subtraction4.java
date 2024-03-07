@@ -1,6 +1,6 @@
 package algstudent.s3;
 
-public class Substraction4 {
+public class Subtraction4 {
 	static long cont;
 
 	public static void rec4(int n) {
