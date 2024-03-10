@@ -1,21 +1,25 @@
 package algstudent.s3;
 
-/* Class that models T(n)=T(n-1)+O(1)
- * The time complexity is O(n) 
+/* Class that models T(n)=T(n-1)+O(n)
+ * The time complexity is quadratic O(n^2) 
  * and the waste of stack is O(n)
  * In this case => the stack overflows 
  */
-public class Subtraction1 {
+public class Subtraction2 {
 	
 	static long cont;
 	
-	public static long rec1(int n) {
+	public static long rec2(int n) {
 		if (n <= 0)
 			cont++;
 		else {
-			cont++; // O(1)=O(n^0)
-			rec1(n - 1);
+			for (int i = 0; i < n; i++)
+				cont++; // O(n)
+			rec2(n - 1);
+			for (int i = 0; i < n; i++)
+				cont++; // O(n)
 		}
+		return cont;
 	}
 
 	public static void main(String arg[]) {
@@ -24,11 +28,11 @@ public class Subtraction1 {
 		
 		for (int n = 1; n <= 100000; n *= 2) {
 			t1 = System.currentTimeMillis();
-			
+
 			for (int reps=1; reps<=nTimes;reps++)
 			{ 
-				cont = rec1(n);
-			} 		
+				cont = rec2(n);
+			} 			
 
 			t2 = System.currentTimeMillis();
 

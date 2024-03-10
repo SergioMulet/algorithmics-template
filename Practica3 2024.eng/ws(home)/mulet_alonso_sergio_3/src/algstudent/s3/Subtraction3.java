@@ -19,6 +19,7 @@ public class Subtraction3 {
 			rec3(n - 1);
 			rec3(n - 1);
 		}
+		return cont;
 	}
 
 	public static void main(String arg[]) {
