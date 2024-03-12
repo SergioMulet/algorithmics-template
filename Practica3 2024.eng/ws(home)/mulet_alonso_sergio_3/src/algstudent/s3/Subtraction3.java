@@ -26,7 +26,7 @@ public class Subtraction3 {
 		long t1, t2 = 0;
 		int nTimes = Integer.parseInt (arg [0]);
 		
-		for (int n = 1; n <= 100; n++) {
+		for (int n = 1; n <= 1000000; n++) {
 			t1 = System.currentTimeMillis();
 
 			for (int reps=1; reps<=nTimes;reps++)
