@@ -7,11 +7,11 @@
 # Created:     14/03/2024
 # Copyright:   (c) uo296503 2024
 # Licence:     <your licence>
-#-------------------------------------------------------------------------------
-import Prim
+#-------------------------------------------------------------------------------                                                                                                                                                                                    import Prim
 import time
 import random
 import Helper
+import Prim
 
 def main():
     n = 256
@@ -26,4 +26,4 @@ def main():
 
 
 if __name__ == '__main__':
-    main()
+    main()  
