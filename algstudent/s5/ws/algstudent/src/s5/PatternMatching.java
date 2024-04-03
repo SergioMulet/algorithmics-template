@@ -31,13 +31,11 @@ public class PatternMatching {
                 			dp[i][j] = dp[i][j-1];
                 	}
                     dp[i][j] = dp[i - 1][j - 1];
-                } else if (pattern.charAt(j - 1) == '*') {
+                } 
+                else if (pattern.charAt(j - 1) == '*') {
                     dp[i][j] = dp[i][j - 1] || dp[i - 1][j];
                 }
             }
-        }
-        if (!dp[m][n]) {
-            return false;
         }
         
         return dp[m][n];
