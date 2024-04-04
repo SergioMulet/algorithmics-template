@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename type &apos;algstudent.s3.Substraction4&apos; to &apos;Subtraction4&apos;&#x0D;&#x0A;- Original project: &apos;mulet_alonso_sergio_3&apos;&#x0D;&#x0A;- Original element: &apos;algstudent.s3.Substraction4&apos;&#x0D;&#x0A;- Renamed element: &apos;algstudent.s3.Subtraction4&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Substraction4&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;algstudent.s3{Substraction4.java[Substraction4" matchStrategy="1" name="Subtraction4" qualified="false" references="true" similarDeclarations="false" stamp="1709831628468" textual="false" version="1.0"/>
+</session>

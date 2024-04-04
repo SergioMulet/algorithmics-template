@@ -1,0 +1,4 @@
+INDEX VERSION 1.131+C:\Users\uo296503\Documents\algorithmics-template\Practica3 2024.eng\ws\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+2525779536.index
+2367783050.index
