@@ -15,10 +15,11 @@ public class PatternMatchingTest {
 	String text;
 	List<String> patterns;
 	List<Boolean> expectedResults;
-
+	
+	
 	@Test
-	public void test1() {
-		loadData("src/s5/test01.txt");		
+	public void test1() {	
+		loadData("src/s5/test01.txt");
 		PatternMatching patternMatching = new PatternMatching(text);		
 		for (int i = 0; i < patterns.size(); i++) {			
 			patternMatching.checkPattern(patterns.get(i));
@@ -29,30 +30,31 @@ public class PatternMatchingTest {
 	
 	@Test
 	public void test2() {
-		loadData("src/s5/test02.txt");		
-		PatternMatching patternMatching = new PatternMatching(text);		
-		for (int i = 0; i < patterns.size(); i++) {	
-			System.out.println(i + expectedResults.get(i).toString() + patternMatching.checkPattern(patterns.get(i)) + patterns.get(i));
-			patternMatching.printsTable();
-			assertEquals(expectedResults.get(i), patternMatching.checkPattern(patterns.get(i)));				
-		}
-	}
-	
-	@Test
-	public void test3() {
-		loadData("src/s5/test03.txt");		
+		loadData("src/s5/test02.txt");
 		PatternMatching patternMatching = new PatternMatching(text);		
 		for (int i = 0; i < patterns.size(); i++) {			
 			assertEquals(expectedResults.get(i), patternMatching.checkPattern(patterns.get(i)));
 			patternMatching.printsTable();	
 		}
 	}
-
+	
+	
+	@Test
+	public void test3() {
+		loadData("src/s5/test03.txt");
+		PatternMatching patternMatching = new PatternMatching(text);		
+		for (int i = 0; i < patterns.size(); i++) {			
+			assertEquals(expectedResults.get(i), patternMatching.checkPattern(patterns.get(i)));
+			patternMatching.printsTable();	
+		}
+	}
+		
 	private void loadData(String file) {
+		
 		BufferedReader reader = null;
 		this.patterns = new ArrayList<String>();
 		this.expectedResults = new ArrayList<Boolean>();	
-
+		
 		try {
 			reader = new BufferedReader(new FileReader(file));
 			this.text = reader.readLine(); 	
@@ -73,5 +75,6 @@ public class PatternMatchingTest {
 				e.printStackTrace();
 			}
 		}
+		
 	}
 }
