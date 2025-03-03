@@ -13,7 +13,7 @@ public class QuicksortInsertionTimes {
 
 		t1 = System.currentTimeMillis();
 
-		QuicksortInsertion.quicksortInsertion(v, 0, v.length - 1);
+		QuicksortInsertion.quicksortInsertion(v);
 
 		t2 = System.currentTimeMillis();
 

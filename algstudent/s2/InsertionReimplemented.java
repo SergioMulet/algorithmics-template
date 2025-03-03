@@ -11,11 +11,11 @@ public class InsertionReimplemented {
 		int j;
 		int pivot;
 		
-		for (int i = left; i < right+1; i++) {
+		for (int i = left+1; i < right+1; i++) {
 			pivot = a[i];
 			j = i-1;
 			
-			while (j >= 0 && pivot < a[j]) {
+			while (j >= left && pivot < a[j]) {
 				a[j+1] = a[j];
 				j--;
 			}
