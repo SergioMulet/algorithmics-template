@@ -12,7 +12,7 @@ public class Subtraction1 {
 			cont++;
 		else {
 			cont++; // O(1)=O(n^0)
-			rec1(n - 1);
+			rec1(n - 1); //a=1 b=1 k = 0 -> O(n)
 		}
 		return cont;
 	}
